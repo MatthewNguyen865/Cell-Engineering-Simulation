@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cell-engineering-simulation"
+version = "0.1.0"
+description = "A modular chemical engineering simulation of a simplified eukaryotic cell."
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
