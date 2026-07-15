@@ -24,3 +24,7 @@ INITIAL_SPECIES = {
 
 # Numerical settings
 SOLVER_METHOD = "RK45"
+
+# Cytoplasmic settings
+CYTOPLASM_VOLUME = 1.0e-15      # m^3 or choose consistent units
+CYTOPLASM_TEMPERATURE = 310.15  # K

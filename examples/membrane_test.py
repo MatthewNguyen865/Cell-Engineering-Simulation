@@ -9,8 +9,8 @@ cell_state = CellState(cfg.INITIAL_SPECIES)
 cell_membrane = CellMembrane(environment)
 
 print("Before transport:")
-print("Glucose:", cell_state.get_species("glucose"))
-print("Oxygen:", cell_state.get_species("oxygen"))
+print("Glucose:", cell_state.cytoplasm.get_species("glucose"))
+print("Oxygen:", cell_state.cytoplasm.get_species("oxygen"))
 
 simulation = Simulation(
     cell_state,
@@ -20,5 +20,5 @@ simulation = Simulation(
 simulation.run(1.0)
 
 print("\nAfter transport:")
-print("Glucose:", cell_state.get_species("glucose"))
-print("Oxygen:", cell_state.get_species("oxygen"))
+print("Glucose:", cell_state.cytoplasm.get_species("glucose"))
+print("Oxygen:", cell_state.cytoplasm.get_species("oxygen"))

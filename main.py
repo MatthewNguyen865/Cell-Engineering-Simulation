@@ -12,4 +12,4 @@ simulation = Simulation(
 simulation.run(cfg.SIMULATION_TIME)
 
 print(cell.time)
-print(cell.species)
+print(cell.cytoplasm.species)

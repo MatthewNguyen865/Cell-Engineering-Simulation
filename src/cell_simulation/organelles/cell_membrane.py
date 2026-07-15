@@ -16,7 +16,7 @@ class CellMembrane:
     def update(self, cell_state, timestep):
        for species, permeability in self.permeabilities.items():
            outside = self.environment.species[species]
-           inside = cell_state.get_species(species)
+           inside = cell_state.cytoplasm.get_species(species)
 
            rate = diffusion_rate(
                outside,
@@ -26,7 +26,7 @@ class CellMembrane:
 
            change = rate * timestep
 
-           cell_state.update_species(
+           cell_state.cytoplasm.update_species(
                species,
                change
            )
