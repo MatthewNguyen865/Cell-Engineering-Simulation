@@ -20,6 +20,7 @@ INITIAL_SPECIES = {
     "pyruvate": 5.0,
     "amino_acids": 1.0,
     "proteins": 0.0,
+    "mRNA": 0.0
 }
 
 # Numerical settings
@@ -32,3 +33,6 @@ CYTOPLASM_TEMPERATURE = 310.15  # K
 # Mitochondrion settings
 MITOCHONDRIAL_RATE_CONSTANT = 0.05
 MITOCHONDRIAL_ATP_YIELD = 1.0
+
+# Nucleus settings
+TRANSCRIPTION_RATE = 0.01
