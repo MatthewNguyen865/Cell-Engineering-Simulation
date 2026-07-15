@@ -21,6 +21,7 @@ INITIAL_SPECIES = {
     "amino_acids": 1.0,
     "unfolded_proteins": 0.0,
     "proteins": 0.0,
+    "packaged_proteins": 0.0,
     "mRNA": 0.0
 }
 
@@ -44,3 +45,6 @@ PROTEIN_YIELD = 1.0
 
 # endoplasmic reticulum settings
 PROTEIN_FOLDING_RATE = 0.02
+
+# golgi apparatus settings
+PROTEIN_PACKAGING_RATE = 0.02
