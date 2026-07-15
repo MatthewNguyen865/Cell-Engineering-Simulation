@@ -1,8 +1,8 @@
 from cell_simulation.utils import config as cfg
 
-class Ribosome:
+class ER:
     """
-    Models simplified protein synthesis
+    Models folding of proteins
     """
 
     def __init__(self):
@@ -10,20 +10,18 @@ class Ribosome:
 
     def update(self, cell_state, timestep):
         cytoplasm = cell_state.cytoplasm
-        
-        mRNA = cytoplasm.get_species("mRNA")
-        amino_acids = cytoplasm.get_species("amino_acids")
+
+        unfolded_proteins = cytoplasm.get_species("unfolded_proteins")
         ATP = cytoplasm.get_species("ATP")
 
-        rate = cfg.TRANSLATION_RATE * mRNA * amino_acids * ATP
+        rate = cfg.PROTEIN_FOLDING_RATE * unfolded_proteins * ATP
         reaction_amount = rate * timestep
         reaction_amount = min(
             reaction_amount,
-            amino_acids,
+            unfolded_proteins,
             ATP
         )
 
-        cytoplasm.update_species("amino_acids", -reaction_amount)
+        cytoplasm.update_species("unfolded_proteins", -reaction_amount)
         cytoplasm.update_species("ATP", -reaction_amount)
-        cytoplasm.update_species("unfolded_proteins", reaction_amount)
-
+        cytoplasm.update_species("proteins", reaction_amount)

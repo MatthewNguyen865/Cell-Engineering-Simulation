@@ -19,6 +19,7 @@ INITIAL_SPECIES = {
     "ADP": 1.0,
     "pyruvate": 5.0,
     "amino_acids": 1.0,
+    "unfolded_proteins": 0.0,
     "proteins": 0.0,
     "mRNA": 0.0
 }
@@ -40,3 +41,6 @@ TRANSCRIPTION_RATE = 0.01
 # Ribosome settings
 TRANSLATION_RATE = 0.02
 PROTEIN_YIELD = 1.0
+
+# endoplasmic reticulum settings
+PROTEIN_FOLDING_RATE = 0.02
