@@ -13,10 +13,10 @@ simulation = Simulation(
     organelles=[nucleus]
 )
 
-print("Before")
+print("Before:")
 print("mRNA:", cell_state.cytoplasm.get_species("mRNA"))
 
 simulation.run(1.0)
 
-print("After")
+print("\nAfter:")
 print("mRNA:", cell_state.cytoplasm.get_species("mRNA"))

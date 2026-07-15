@@ -36,3 +36,7 @@ MITOCHONDRIAL_ATP_YIELD = 1.0
 
 # Nucleus settings
 TRANSCRIPTION_RATE = 0.01
+
+# Ribosome settings
+TRANSLATION_RATE = 0.02
+PROTEIN_YIELD = 1.0
