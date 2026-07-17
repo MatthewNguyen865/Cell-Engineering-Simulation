@@ -24,4 +24,5 @@ class ER:
 
         cytoplasm.update_species("unfolded_proteins", -reaction_amount)
         cytoplasm.update_species("ATP", -reaction_amount)
+        cytoplasm.update_species("ADP", reaction_amount)
         cytoplasm.update_species("proteins", reaction_amount)

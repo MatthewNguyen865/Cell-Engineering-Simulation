@@ -44,11 +44,15 @@ TRANSCRIPTION_RATE = 0.01
 TRANSLATION_RATE = 0.02
 PROTEIN_YIELD = 1.0
 
-# endoplasmic reticulum settings
+# Endoplasmic Reticulum settings
 PROTEIN_FOLDING_RATE = 0.02
 
-# golgi apparatus settings
+# Golgi Apparatus settings
 PROTEIN_PACKAGING_RATE = 0.02
 
 # Lysosome settings
 LYSOSOME_DEGRADATION_RATE = 0.02
+
+# Glycolysis settings
+GLYCOLYSIS_RATE_CONSTANT = 0.03
+GLYCOLYSIS_ATP_YIELD = 2.0
